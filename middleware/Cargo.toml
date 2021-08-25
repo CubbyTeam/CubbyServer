@@ -1,14 +1,30 @@
 [package]
 name = "cubby_server_middleware"
 version = "0.1.0"
-authors = ["Chris Ohk <utilforever@gmail.com>", "Seungoh Han <so.h4ns@gmail.com>", "Jaeyong Sung <jaeyong0201@gmail.com>", "Seungbin Oh <sboh1214@gmail.com>", "Minchurl Shin <minchurl001@gmail.com>"]
+authors = [
+    "Chris Ohk <utilforever@gmail.com>",
+    "Seungoh Han <so.h4ns@gmail.com>",
+    "Jaeyong Sung <jaeyong0201@gmail.com>",
+    "Seungbin Oh <sboh1214@gmail.com>",
+    "Minchurl Shin <minchurl001@gmail.com>"
+]
 description = "Voxel-based MMORPG server using Rust"
 repository = "https://github.com/utilforever/CubbyServer"
 readme = "README.md"
-keywords = [ "game", "mmorpg", "server" ]
+keywords = ["game", "mmorpg", "server"]
 license = "MIT"
 edition = "2018"
+include = [
+    "src/**.*",
+    "Cargo.toml",
+    "README.md"
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+custom_debug_derive = "0.5.0"
+derive_builder = "0.10.2"
+tokio = { version = "1.10.1", features = ["net"] }
+rand = "0.8.4"
+rustls = "0.19.1"
