@@ -63,11 +63,11 @@ pub struct Config {
     pub protobuf_dir: PathBuf,
     /// key file of tls connection
     /// if this value is `None`, there is no tls connection
-    #[builder(default = "None", setter(strip_option))]
+    #[builder(default = "None", setter(strip_option, into))]
     pub key_path: Option<PathBuf>,
     /// cert file of tls connection
     /// if this value is `None`, there is no tls connection
-    #[builder(default = "None", setter(strip_option))]
+    #[builder(default = "None", setter(strip_option, into))]
     pub cert_path: Option<PathBuf>,
     /// auth server configuration
     #[builder(default = "AuthServer::builder().build().unwrap()")]
